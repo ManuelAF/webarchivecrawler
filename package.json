@@ -1,16 +1,15 @@
 {
-  "name": "webarchivecrawler",
-  "version": "0.0.0",
-  "description": "webarchivecrawler",
-  "main": "main.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Manolo",
-  "license": "ISC",
-  "dependencies": {
-    "async": "^0.2.10",
-    "request": "^2.34.0",
-    "colors": "^0.6.2"
-  }
+    "name" : "webarchivecrawler",
+    "version" : "0.0.0",
+    "description" : "webarchivecrawler",
+    "main" : "main.js",
+    "scripts" : {
+        "test" : "echo \"Error: no test specified\" && exit 1"
+    },
+    "author" : "Manolo",
+    "license" : "ISC",
+    "dependencies" : {
+        "async" : "^0.2.10",
+        "colors" : "^0.6.2"
+    }
 }
