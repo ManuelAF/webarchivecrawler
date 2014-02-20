@@ -1,4 +1,3 @@
-var http = require('http');
 var async = require('async');
 var request = require('request');
 var fs = require('fs');
@@ -26,14 +25,15 @@ async.waterfall([
             request(url, function (err, response, body) {
                 if (!err && response.statusCode == 200) {
                     filename = n.exec(url);
-                    fs.writeFileSync('tmp/' + filename[1] + '.html', body, { encoding : 'ascii' });
-                    console.log(url.green);
-                    cb(null, 'nada');
+                    fs.writeFile('tmp/' + filename[1] + '.html', body, { encoding : 'ascii' }, function (err) {
+                        console.log(url.green);
+                        cb(err, 'nada');
+                    });
                 } else {
                     console.log(url.red);
                     cb(err);
                 }
-            });        
+            });
         }, function (err, results) {
             cb(err, results);
         });
